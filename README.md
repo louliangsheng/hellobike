@@ -1,8 +1,8 @@
-# 哈啰智能芯接入HomeAssistant[参考链接](https://1min.cc/archives/164.html)
+# [哈啰智能芯接入HomeAssistant](https://1min.cc/archives/164.html)
 1. AppStore下载Stream并打开，按App内提示安装相关描述文件。
 2. 打开支付宝的哈罗小程序，点击买电动车进入到开锁界面，切换到Stream点击开始抓包进行抓包，然后切换到开锁界面点击启动，开锁成功后回到Stream，然后点击停止抓包。
 3. 点击抓包历史-选择记录-按域名-a.hellobike.com-a.hellobike.com/evehicle/api?rent.order.getRentBikeStatus-请求-查看请求，复制抓包结果中bikeNo，token的值。
-4. 将下面内容复制到到configuration.yaml，并将抓包结果中bikeNo，token的值进行替换，完成后重启homeassistant。
+4. 将下面内容复制到到configuration.yaml，并将抓包结果中bikeNo，token的值进行替换，完成后重启homeassistant。[演示视频](https://www.bilibili.com/video/BV1ra411E7Cq/?spm_id_from=333.788.recommend_more_video.18)
 ```yaml
 #哈啰智能芯
 binary_sensor:
