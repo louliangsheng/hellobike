@@ -4,7 +4,7 @@
 
 3.开锁成功之后回到“Stream”APP，然后点击停止抓包-抓包历史-选择记录-按域名-a.hellobike.com-https://a.hellobike.com/evehicle/api?rent.order.getRentBikeStatus -请求-查看请求。
 
-4.复制记录其中的Bikeno，Token的值到hellobike.yaml。
+4.复制抓包结果中的Bikeno，Token的值到hellobike.yaml。
 
 5.将hellobike.yaml内的内容里面到configuration.yaml。
 
