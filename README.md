@@ -46,6 +46,6 @@ lock:
     unlock:
       service: rest_command.open_lock
 ```
-#参考链接
-[接入HomeKit演示视频](https://www.bilibili.com/video/BV1ra411E7Cq/?spm_id_from=333.788.recommend_more_video.18)
-[iPhone快捷指令以及哈啰芯片快速开关锁总结](https://1min.cc/archives/164.html)
+# 参考链接
+* [接入HomeKit演示视频](https://www.bilibili.com/video/BV1ra411E7Cq/?spm_id_from=333.788.recommend_more_video.18)
+* [iPhone快捷指令以及哈啰芯片快速开关锁总结](https://1min.cc/archives/164.html)
