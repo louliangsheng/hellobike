@@ -23,6 +23,15 @@ sensor:
     value_template: '{{ value_json.data.batteryPercent }}'
     device_class: battery
     unit_of_measurement: '%'
+sensor:
+  - platform: rest
+    name: Hellobike Position
+    unique_id: hellobike_position
+    resource: https://a.hellobike.com/evehicle/api?rent.order.getRentBikeStatus
+    method: POST
+    payload: '{"bikeNo" : "xxx","token" : "xxx","action" : "rent.order.getRentBikeStatus"}'
+    value_template: '{{ value_json.data.position }}'
+
 rest_command:
   close_lock:
     url: https://a.hellobike.com/evehicle/api?rent.order.closeLockCommand
@@ -46,6 +55,25 @@ lock:
     unlock:
       service: rest_command.open_lock
 ```
+5. 然后添加如下自动化，通过调用device_tracker.see服务将sensor转化成device_tracker实体，能在HomeAssistant显示位置信息。
+```
+alias: 哈啰智能芯位置转化
+description: ""
+trigger:
+  - platform: state
+    entity_id:
+      - sensor.hellobike_position
+condition: []
+action:
+  - service: device_tracker.see
+    data_template:
+      dev_id: hellobike
+      gps:
+        - "{{ states('sensor.hellobike_position').split(',')[1] }}"
+        - "{{ states('sensor.hellobike_position').split(',')[0] }}"
+mode: single
+````
+
 ## 参考链接
 * [接入HomeKit演示视频](https://www.bilibili.com/video/BV1ra411E7Cq/?spm_id_from=333.788.recommend_more_video.18)
 * [iPhone快捷指令以及哈啰芯片快速开关锁总结](https://1min.cc/archives/164.html)
