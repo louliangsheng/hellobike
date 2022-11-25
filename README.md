@@ -75,5 +75,11 @@ mode: single
 ````
 
 ## 参考链接
-* [接入HomeKit演示视频](https://www.bilibili.com/video/BV1ra411E7Cq/?spm_id_from=333.788.recommend_more_video.18)
-* [iPhone快捷指令以及哈啰芯片快速开关锁总结](https://1min.cc/archives/164.html)
+- [接入HomeKit演示视频](https://www.bilibili.com/video/BV1ra411E7Cq/?spm_id_from=333.788.recommend_more_video.18)
+- [iPhone快捷指令以及哈啰芯片快速开关锁总结](https://1min.cc/archives/164.html)
+
+## 交流
+- QQ群：[198841186](https://jq.qq.com/?_wv=1027&k=lZAMn5Uo)
+- 微信群：
+
+  <img src="https://user-images.githubusercontent.com/4549099/161735971-0540ce1c-eb49-4aff-8cb3-3bdad15e22f7.png" alt="xiaomi miot weixin group" width="100">
