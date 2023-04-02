@@ -69,8 +69,8 @@ action:
     data_template:
       dev_id: hellobike
       gps:
-        - "{{ states('sensor.hellobike_position').split(',')[1] }}"
-        - "{{ states('sensor.hellobike_position').split(',')[0] }}"
+        - "{{ states('sensor.hellobike_position').split(',')[1]|float-0.0005 }}"
+        - "{{ states('sensor.hellobike_position').split(',')[0]|float-0.0055 }}"
 mode: single
 ````
 
