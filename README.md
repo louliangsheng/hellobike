@@ -43,6 +43,11 @@ rest_command:
     method: POST
     payload: '{"bikeNo" : "xxx","token" : "xxx","action" : "rent.order.openLock"}'
     content_type: 'application/json; charset=utf-8'
+  bell:
+    url: https://a.hellobike.com/evehicle/api?rent.order.bell
+    method: POST
+    payload: '{"bikeNo" : "xxx","token" : "xxx","action" : "rent.order.bell"}'
+    content_type: 'application/json; charset=utf-8'
 
 lock:
   - platform: template
@@ -54,6 +59,13 @@ lock:
       service: rest_command.close_lock
     unlock:
       service: rest_command.open_lock
+ 
+ template:
+  - button: 
+    - name: 哈啰智能芯鸣笛
+      unique_id: hellobike_bell
+      press: 
+          service: rest_command.bell
 ```
 5. 然后添加如下自动化，通过调用device_tracker.see服务将sensor转化成device_tracker实体，能在HomeAssistant显示位置信息。
 ```
