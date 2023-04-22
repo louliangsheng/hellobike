@@ -23,7 +23,6 @@ sensor:
     value_template: '{{ value_json.data.batteryPercent }}'
     device_class: battery
     unit_of_measurement: '%'
-sensor:
   - platform: rest
     name: Hellobike Position
     unique_id: hellobike_position
