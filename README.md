@@ -30,6 +30,15 @@ sensor:
     method: POST
     payload: '{"bikeNo" : "xxx","token" : "xxx","action" : "rent.order.getRentBikeStatus"}'
     value_template: '{{ value_json.data.position }}'
+  - platform: rest
+    name: Hellobike Rssi
+    unique_id: hellobike_rssi
+    resource: https://a.hellobike.com/evehicle/api?rent.order.getRentBikeStatus
+    method: POST
+    payload: '{"bikeNo" : "xxx","token" : "xxx","action" : "rent.order.getRentBikeStatus"}'
+    value_template: '{{ value_json.data.simRssi }}'
+    device_class: signal_strength
+    unit_of_measurement: 'dBm'
 
 rest_command:
   close_lock:
